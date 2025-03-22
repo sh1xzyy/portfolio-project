@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Wallet webservice",
+    "url1": "./img/projectimages/manage-finances@1x.jpg",
+    "url2": "./img/projectimages/manage-finances@2x.jpg",
+    "technologies": "React, JavaScript, Node JS, Git"
+  },
+  {
+    "title": "Green harvest webservice",
+    "url1": "./img/projectimages/organic-vegetables@1x.jpg",
+    "url2": "./img/projectimages/organic-vegetables@2x.jpg",
+    "technologies": "React, JavaScript, Node JS, Git"
+  },
+  {
+    "title": "English Exellence webservice",
+    "url1": "./img/projectimages/discover@1x.jpg",
+    "url2": "./img/projectimages/discover@2x.jpg",
+    "technologies": "React, JavaScript, Node JS, Git"
+  },
+  {
+    "title": "Power pulse webservice",
+    "url1": "./img/projectimages/transforming@1x.jpg",
+    "url2": "./img/projectimages/transforming@2x.jpg",
+    "technologies": "React, JavaScript, Node JS, Git"
+  },
+  {
+    "title": "Mimino website",
+    "url1": "./img/projectimages/mimino@@1x.jpg",
+    "url2": "./img/projectimages/mimino@2x.jpg",
+    "technologies": "React, JavaScript, Node JS, Git"
+  },
+  {
+    "title": "Vyshyvanka vibes Landing Page",
+    "url1": "./img/projectimages/reviving-traditions@1x.jpg",
+    "url2": "./img/projectimages/reviving-traditions@2x.jpg",
+    "technologies": "React, JavaScript, Node JS, Git"
+  },
+  {
+    "title": "Chego jewelry website",
+    "url1": "./img/projectimages/a-brand@1x.jpg",
+    "url2": "./img/projectimages/a-brand@2x.jpg",
+    "technologies": "React, JavaScript, Node JS, Git"
+  },
+  {
+    "title": "Energy flow webservice",
+    "url1": "./img/projectimages/bodyshape@1x.jpg",
+    "url2": "./img/projectimages/bodyshape@2x.jpg",
+    "technologies": "React, JavaScript, Node JS, Git"
+  },
+  {
+    "title": "fruitbox online store",
+    "url1": "./img/projectimages/fresh-harvest@1x.jpg",
+    "url2": "./img/projectimages/fresh-harvest@2x.jpg",
+    "technologies": "React, JavaScript, Node JS, Git"
+  },
+  {
+    "title": "Starlight studio landing page",
+    "url1": "./img/projectimages/turn-on@1x.jpg",
+    "url2": "./img/projectimages/turn-pn@2x.jpg",
+    "technologies": "React, JavaScript, Node JS, Git"
+  }
+]
