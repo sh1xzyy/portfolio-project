@@ -2,16 +2,117 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/jpg" href="./img/projectimages/favicon.jpg" />
+    <link rel="shortcut icon" href="/portfolio-team-project/assets/favicon-vuQ0R6MU.svg" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DEV</title>
     <script type="module" crossorigin src="/portfolio-team-project/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/portfolio-team-project/assets/index-ChAK9-JZ.css">
+    <link rel="modulepreload" crossorigin href="/portfolio-team-project/assets/vendor-DkzXOxGX.js">
+    <link rel="stylesheet" crossorigin href="/portfolio-team-project/assets/index-BRalfHDV.css">
   </head>
-  <body>
+  <body class="theme-light">
+    <!-- Header -->
     <header class="header">
-      <div class="container"></div>
+      <div class="container">
+        <a class="header-logo" href="./index.html">LLOYD<span>JEFFERSON.</span></a>
+        <div class="right-block">
+        <input class="theme-switch" type="checkbox" name="theme">
+        <nav class="header-nav">
+          <ul class="header-nav-list">
+            <li class="header-list-item"><a class="header-nav-link" href="#">About me</a></li>
+            <li class="header-list-item"><a class="header-nav-link" href="#">Projects</a></li>
+            <li class="header-list-item"><a class="header-nav-link" href="#">Contacts</a></li>
+          </ul>
+        </nav>
+        <button class="burger-menu" type="button">
+          <svg width="32" height="32">
+            <use href="/portfolio-team-project/assets/icons-BjnDEris.svg#menu-icon"></use>
+          </svg>
+        </button>
+        </div>
+      </div>
     </header>
-    <main></main>
+    <!-- Main -->
+    <main>
+      <!-- Hero -->
+      <!-- <section class="hero">
+        <div class="container">
+          <div class="hero-top">
+            <h1 class="hero-title">hello, i am <span>fullstack developer</span></h1>
+            <img class="hero-img" src="./img/hero/img.png" alt="fullstack developer" width="592" height="444">
+          </div>
+          <div class="hero-bottom">
+            <a class="hero-bottom-link" href="#">
+              <svg width="28" height="28">
+              <use href="./img/icons.svg#order-arrow"></use>
+            </svg>
+            Order the project
+            <span class="hero-bottom-decor"></span>
+          </a>
+            <p class="hero-description">I work with people all over the world to create 
+              <span>impressive</span> and <span>functional websites</span> that reflect
+               each client’s unique personality.</p>
+          </div>
+        </div>
+        <ul class="hero-link-list">
+          <li class="hero-list-item">
+            <a class="hero-list-link" href="#">Instagram</a>
+          </li>
+          <li class="hero-list-item">
+            <a class="hero-list-link" href="#">Facebook</a>
+          </li>
+          <li class="hero-list-item">
+            <a class="hero-list-link" href="#">Linkedin</a>
+          </li>
+          <li class="hero-list-item">
+            <a class="hero-list-link" href="#">GitHub</a>
+          </li>
+        </ul>
+      </section> -->
+
+      <!-- Reviews -->
+      <section class="section" id="reviews">
+        <div class="container">
+          <h2 class="reviews-title">reviews</h2>
+          <div class="swiper">
+            <ul class="swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-buttons">
+            <button class="swiper-button-prev" type="button">
+              <svg width="24" height="24">
+                <use href="/portfolio-team-project/assets/icons-BjnDEris.svg#arrow-right"></use>
+              </svg>
+            </button>
+            <button class="swiper-button-next" type="button">
+              <svg width="24" height="24">
+                <use href="/portfolio-team-project/assets/icons-BjnDEris.svg#arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+          <h3 class="review-not-found is-hidden">Not Found</h3>
+        </div>
+      </section>
+
+      
+    </main>
+    <!-- Menu Overlay -->
+     <div class="menu-overlay">
+      <div class="container">
+        <div class="menu-header">
+        <a class="header-logo" href="./index.html">LLOYD<span>JEFFERSON.</span></a>
+        <button class="menu-close-btn" type="button">
+          <svg width="32" height="32">
+            <use href="/portfolio-team-project/assets/icons-BjnDEris.svg#close-icon"></use>
+          </svg>
+        </button>
+      </div>
+        <nav class="menu-nav">
+          <ul class="menu-nav-list">
+            <li class="menu-list-item"><a class="menu-nav-link" href="#">About me</a></li>
+            <li class="menu-list-item"><a class="menu-nav-link" href="#">Projects</a></li>
+            <li class="menu-list-item"><a class="menu-nav-link" href="#">Contacts</a></li>
+          </ul>
+        </nav>
+      </div>
+     </div>
   </body>
 </html>
