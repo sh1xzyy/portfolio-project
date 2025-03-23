@@ -133,6 +133,79 @@ main {
 }
 /* #endregion Header */
 
+/* #region Tech Skills */
+.marquee {
+  overflow: hidden;
+  font-family: 'Pridi', sans-serif;
+  font-weight: 600;
+  font-size: 34px;
+  text-transform: uppercase;
+  background-color: #bcdfd1;
+}
+
+.marquee.second {
+  position: relative;
+  transform: rotate(2deg);
+  z-index: -1;
+  background-color: #e4e5e6;
+}
+
+.marquee__inner {
+  display: flex;
+  column-gap: 24px;
+}
+
+.marquee__line {
+  display: flex;
+  column-gap: 56px;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 32px 15px;
+  min-width: 100%;
+  white-space: nowrap;
+  animation: marqueeLine 15s linear infinite;
+}
+
+.marquee__line span {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #292929;
+}
+
+.marquee__line-second span {
+  color: #00b068;
+}
+
+.marquee__line span::after {
+  position: absolute;
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  margin-left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #00b068;
+}
+
+.marquee__line-second span::after {
+  background-color: #292929;
+}
+
+@keyframes marqueeLine {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+/* #endregion Tech Skills */
+
 /* #region My Projects */
 .projects-title {
   font-family: 'Impact', sans-serif;
@@ -424,6 +497,7 @@ main {
   section {
     padding: 62px 0;
   }
+  /* Header */
   .menu-overlay {
     opacity: 0;
     pointer-events: none;
@@ -450,6 +524,16 @@ main {
     letter-spacing: 0.03em;
     color: #292929;
   }
+  /* Tech Skills */
+  .marquee__line {
+    padding: 40px 15px;
+  }
+  .marquee__line span {
+    font-size: 36px;
+    line-height: 1.33;
+    letter-spacing: 0.01em;
+  }
+  /* Projects */
   .projects-title {
     font-size: 108px;
     line-height: 1.15;
