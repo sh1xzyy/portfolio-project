@@ -1,3 +1,7 @@
-import { swiperLogic } from "./js/reviews/reviews";
+import { initProjectItems } from "./js/components/projects";
+import { swiperLogic } from "./js/components/reviews";
 
-swiperLogic()
+document.addEventListener("DOMContentLoaded", () => {
+    initProjectItems()
+    swiperLogic()
+})

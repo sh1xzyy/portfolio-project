@@ -1,5 +1,6 @@
+import { refs } from "../refs/refs";
 
-const createMarkup = ({ author, avatar_url, review }) => {
+const createReviewMarkup = ({ author, avatar_url, review }) => {
   return `
   <li class="swiper-slide">
     <p class="swiper-description" tabindex="-1">${review}</p>
@@ -16,7 +17,27 @@ const createMarkup = ({ author, avatar_url, review }) => {
   </li>`;
 };
 
+const createProjectMarkup = ({ title, url1, url2, technologies }) => {
+  return `
+    <li class="projects-list-item">
+      <img class="projects-img" src="${url1}" alt="${title}" srcset="${url1} 1x, ${url2} 2x" loading="lazy">
+      <p class="projects-technologies">${technologies}</p>
+      <h3 class="projects-name">${title}</h3>
+      <a href="#" class="projects-visit-link">VISIT
+        <svg class="projects-visit-svg" width="24" height="24">
+          <use href="./img/icons.svg#visit-arrow"></use>
+        </svg>
+      </a>
+    </li>
+  `;
+};
+
 export const renderMarkup = data => {
-  const markup = data.map(review => createMarkup(review)).join('');
+  const markup = data.map(createReviewMarkup).join('');
   refs.list.insertAdjacentHTML('beforeend', markup);
 };
+
+export const renderProjectsMarkup = data => {
+  const markup = data.map(createProjectMarkup).join("")
+  refs.projectsList.insertAdjacentHTML("beforeend", markup)
+}

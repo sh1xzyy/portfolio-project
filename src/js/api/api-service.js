@@ -11,13 +11,3 @@ export const getReviews = async () => {
     throw error;
   }
 };
-
-// export const getData = async () => {
-//   try {
-//     const response = await axios.get("");
-//     return response.data;
-//   } catch (error) {
-//     console.log('Something went wrong with receiving feedback');
-//     throw error;
-//   }
-// };

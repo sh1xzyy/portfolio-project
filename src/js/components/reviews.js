@@ -1,5 +1,7 @@
 import { renderMarkup } from '../render-functions/render-functions';
 import { Keyboard, Navigation } from 'swiper/modules';
+import { getReviews } from '../api/api-service';
+import { refs } from "../refs/refs"
 import iziToast from 'izitoast';
 import Swiper from 'swiper';
 
@@ -30,7 +32,7 @@ const initSwiper = () => {
 
 export const swiperLogic = async () => {
   try {
-    const data = await getData();
+    const data = await getReviews();
 
     if (!data.length) {
       refs.buttons.classList.add('is-hidden');
