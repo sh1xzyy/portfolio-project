@@ -1,4 +1,4 @@
-import { refs } from "../refs/refs";
+import { refs } from '../refs/refs';
 
 const createReviewMarkup = ({ author, avatar_url, review }) => {
   return `
@@ -22,12 +22,16 @@ const createProjectMarkup = ({ title, url1, url2, technologies }) => {
     <li class="projects-list-item">
       <img class="projects-img" src="${url1}" alt="${title}" srcset="${url1} 1x, ${url2} 2x" loading="lazy">
       <p class="projects-technologies">${technologies}</p>
-      <h3 class="projects-name">${title}</h3>
-      <a href="#" class="projects-visit-link">VISIT
-        <svg class="projects-visit-svg" width="24" height="24">
-          <use href="./img/icons.svg#visit-arrow"></use>
-        </svg>
-      </a>
+      <div class="projects-container">
+        <h3 class="projects-name">${title}</h3>
+        <div class="projects-link-wrapper">
+          <a href="#" class="projects-visit-link">visit
+            <svg class="projects-visit-svg">
+              <use href="./img/icons.svg#visit-arrow"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
     </li>
   `;
 };
@@ -38,6 +42,6 @@ export const renderMarkup = data => {
 };
 
 export const renderProjectsMarkup = data => {
-  const markup = data.map(createProjectMarkup).join("")
-  refs.projectsList.insertAdjacentHTML("beforeend", markup)
-}
+  const markup = data.map(createProjectMarkup).join('');
+  refs.projectsList.insertAdjacentHTML('beforeend', markup);
+};
