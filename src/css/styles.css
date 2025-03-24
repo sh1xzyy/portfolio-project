@@ -52,6 +52,10 @@ img {
   height: auto;
 }
 
+.highlight-color {
+  color: light-dark(#00b068, #14c57c);
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
@@ -115,9 +119,6 @@ main {
   text-transform: uppercase;
   color: #292929;
 }
-.header-logo span {
-  color: #00b068;
-}
 .theme-switch {
   display: none;
 }
@@ -140,14 +141,14 @@ main {
   font-weight: 600;
   font-size: 34px;
   text-transform: uppercase;
-  background-color: #bcdfd1;
+  background-color: light-dark(#bcdfd1, #204136);
 }
 
 .marquee.second {
   position: relative;
   transform: rotate(2deg);
   z-index: -1;
-  background-color: #e4e5e6;
+  background-color: light-dark(#e4e5e6, #2a2d32);
 }
 
 .marquee__inner {
@@ -172,11 +173,7 @@ main {
   line-height: 1.25;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: #292929;
-}
-
-.marquee__line-second span {
-  color: #00b068;
+  color: light-dark(#292929, #f0f0f0);
 }
 
 .marquee__line span::after {
@@ -188,11 +185,15 @@ main {
   margin-left: 24px;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #00b068;
+  background-color: light-dark(#00b068, #204136);
+}
+
+.marquee__line-second span {
+  color: light-dark(#00b068, #14c57c);
 }
 
 .marquee__line-second span::after {
-  background-color: #292929;
+  background-color: light-dark(#292929, #f0f0f0);
 }
 
 @keyframes marqueeLine {
@@ -216,10 +217,7 @@ main {
   margin-bottom: 40px;
   text-transform: uppercase;
   text-align: center;
-  color: #292929;
-}
-.projects-title span {
-  color: #00b068;
+  color: light-dark(#292929, #f0f0f0);
 }
 .projects-list {
   display: flex;
@@ -234,7 +232,7 @@ main {
   line-height: 1.5;
   letter-spacing: 0.03em;
   margin-bottom: 16px;
-  color: #292929;
+  color: light-dark(#292929, #f0f0f0);
 }
 .projects-name {
   font-weight: 500;
@@ -243,7 +241,7 @@ main {
   letter-spacing: 0.02em;
   text-transform: uppercase;
   margin-bottom: 16px;
-  color: #292929;
+  color: light-dark(#292929, #f0f0f0);
 }
 .projects-link-wrapper {
   display: flex;
@@ -261,13 +259,17 @@ main {
   line-height: 1.5;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #292929;
-  background-color: #e4e5e6;
+  color: light-dark(#292929, #f0f0f0);
+  background-color: light-dark(#e4e5e6, #2a2d32);
+  transition: background-color 250ms linear;
+}
+.projects-visit-link:hover {
+  background-color: light-dark(#bbbbbb, #3b3f45);
 }
 .projects-visit-svg {
   width: 18px;
   height: 18px;
-  stroke: #00b068;
+  stroke: light-dark(#00b068, #14c57c);
 }
 .projects-load-more {
   position: relative;
@@ -282,7 +284,12 @@ main {
   line-height: 1.56;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #292929;
+  color: light-dark(#292929, #f0f0f0);
+  background-color: transparent;
+  transition: color 250ms linear;
+}
+.projects-load-more:hover {
+  color: light-dark(#00b068, #14c57c);
 }
 .projects-load-more::after {
   position: absolute;
@@ -292,9 +299,138 @@ main {
   top: 75%;
   left: 50%;
   transform: translate(-50%, -75%);
-  background-color: #00b068;
+  background-color: light-dark(#00b068, #14c57c);
 }
 /* #endregion My Projects */
+
+/* #region Benefits */
+.benefits-title {
+  font-family: 'Impact', sans-serif;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1.23;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  color: light-dark(#292929, #f0f0f0);
+}
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.benefits-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  background-color: light-dark(#bcdfd1, #204136);
+}
+.benefits-svg {
+  fill: none;
+  stroke: light-dark(#00b068, #14c57c);
+}
+.benefits-name {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  color: light-dark(#292929, #f0f0f0);
+}
+.benefits-description {
+  max-width: 285px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: light-dark(#292929, #f0f0f0);
+}
+/* #endregion Benefits */
+
+/* #region FAQ */
+.faq-title {
+  font-family: 'Impact', sans-serif;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1.23;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  color: light-dark(#292929, #f0f0f0);
+}
+.faq-list {
+  display: flex;
+  flex-direction: column;
+}
+.faq-list-item {
+  position: relative;
+  border-radius: 16px;
+  padding: 28px 24px;
+}
+.faq-list-item::after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 97%;
+  height: 2px;
+  background-color: light-dark(#e4e5e6, #f0f0f0);
+}
+.is-active {
+  background-color: light-dark(#bcdfd1, #204136);
+}
+.is-active::after {
+  display: none;
+}
+.is-active .faq-btn {
+  transform: rotate(180deg);
+}
+.is-active .faq-item-title {
+  margin-bottom: 24px;
+}
+.is-active .faq-item-description {
+  max-height: 250px;
+  visibility: visible;
+  transition: max-height 250ms linear;
+}
+.faq-item-title {
+  max-width: 245px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: light-dark(#292929, #f0f0f0);
+}
+.faq-list-item:nth-child(5) .faq-item-title {
+  max-width: 239px;
+}
+.faq-btn {
+  position: absolute;
+  top: 32px;
+  right: 28px;
+  line-height: 0;
+  border: none;
+  background-color: transparent;
+  transition: transform 100ms linear;
+}
+.faq-btn-svg {
+  fill: none;
+  stroke: light-dark(#292929, #f0f0f0);
+}
+.faq-item-description {
+  max-height: 0;
+  visibility: hidden;
+  max-width: 260px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: light-dark(#292929, #f0f0f0);
+}
+/* #endregion FAQ */
 
 /* #region Reviews */
 .reviews-title {
@@ -432,6 +568,134 @@ main {
 }
 /* #endregion Reviews */
 
+/* #region Work Together */
+.contact .container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+.contact-title {
+  font-family: 'Impact', sans-serif;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1.23;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  color: light-dark(#292929, #f0f0f0);
+}
+.contact-description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  color: light-dark(#292929, #f0f0f0);
+}
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+.contact-list-item {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+}
+.contact-item-link {
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: light-dark(#292929, #f0f0f0);
+  transition: color 250ms linear;
+}
+.contact-item-link:hover {
+  color: light-dark(#00b068, #14c57c);
+}
+.contact-item-svg {
+  fill: none;
+  stroke: light-dark(#00b068, #14c57c);
+}
+.contact-form {
+  max-width: 320px;
+}
+.input-field-wrapper,
+.textarea-field-wrapper {
+  position: relative;
+  margin-bottom: 12px;
+}
+.input-field {
+  display: block;
+  width: 100%;
+  height: 48px;
+  padding: 0 34px 0 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: #e74a3b;
+  background-color: light-dark(#e4e5e6, #2a2d32);
+}
+.is-correct .input-field-svg {
+  opacity: 1;
+}
+.is-correct .input-field {
+  color: light-dark(#292929, #f0f0f0);
+}
+.error-input-msg {
+  opacity: 0;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  margin-top: 4px;
+  color: #e74a3b;
+  transition: opacity 100ms linear;
+}
+.is-error .error-input-msg {
+  opacity: 1;
+}
+.textarea-field {
+  padding: 16px;
+  height: 128px;
+  resize: none;
+}
+.input-field::placeholder {
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: light-dark(#292929, #f0f0f0);
+}
+.input-field-svg {
+  position: absolute;
+  opacity: 0;
+  top: 50%;
+  right: 16px;
+  fill: light-dark(#00b068, #14c57c);
+  transform: translateY(-50%);
+  transition: opacity 250ms linear;
+}
+.submit-btn {
+  width: 100%;
+  height: 48px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #f0f0f0;
+  background-color: light-dark(#00b068, #14c57c);
+  transition: background-color 250ms linear;
+}
+.submit-btn:hover {
+  background-color: light-dark(#009156, #009156);
+}
+@media screen and (min-width: 768px) {
+}
+/* #endregion Work Together */
+
 /* #region Mobile menu */
 @media screen and (max-width: 767px) {
   .menu-overlay {
@@ -502,6 +766,9 @@ main {
     opacity: 0;
     pointer-events: none;
   }
+  .header .container {
+    padding: 0;
+  }
   .header-logo {
     font-size: 32px;
     letter-spacing: 0.05em;
@@ -566,6 +833,44 @@ main {
     height: 56px;
     margin-top: 60px;
   }
+  /* Benefits */
+  .benefits-title {
+    font-size: 108px;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+    margin-bottom: 0;
+  }
+  .benefits-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .benefits-list-item {
+    width: calc((100% - 32px) / 2);
+  }
+  .benefits-list-item:first-child {
+    margin-left: 368px;
+  }
+  .benefits-name {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  .benefits-description {
+    max-width: 304px;
+  }
+  /* FAQ */
+  .faq-title {
+    font-size: 108px;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+  }
+  .faq-item-title {
+    max-width: 580px;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  .faq-item-description {
+    max-width: 605px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
@@ -582,6 +887,7 @@ main {
     display: block;
     margin-right: 40px;
   }
+  /* My Projects */
   .projects .container {
     max-width: 1008px;
   }
@@ -591,5 +897,38 @@ main {
   .projects-img {
     width: 1008px;
     height: 580px;
+  }
+  /* Benefits */
+  .benefits-container {
+    max-width: 1216px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-image: url('../img/bg-images/benefits-decor.png');
+  }
+  .benefits-title {
+    width: 690px;
+  }
+  .benefits-list-item {
+    width: calc((100% - 2 * 32px) / 3);
+  }
+  .benefits-list-item:first-child {
+    margin-left: 790px;
+  }
+  .benefits-description {
+    max-width: 340px;
+  }
+  /* FAQ */
+  .faq .container {
+    display: flex;
+    column-gap: 104px;
+    background: url('../img/bg-images/faq-decor.png') no-repeat bottom left;
+  }
+  .faq-title {
+    max-width: 520px;
+    margin-bottom: 0;
+  }
+  .faq-list {
+    margin-top: 276px;
   }
 }
