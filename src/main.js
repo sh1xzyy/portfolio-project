@@ -1,7 +1,8 @@
-// import {
-//   onContactFormInput,
-//   onContactFormSubmit,
-// } from './js/contact-form/contactForm';
+import {
+  onContactFormInput,
+  onContactFormSubmit,
+} from './js/components/contactForm';
+import { onBurgerMenuClick } from './js/components/mobile-menu';
 import { initProjectItems } from './js/components/projects';
 import { swiperLogic } from './js/components/reviews';
 import { accordion } from './js/faq/accordion';
@@ -13,5 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
   accordion();
 });
 
-// refs.contactForm.addEventListener('input', onContactFormInput);
-// refs.contactForm.addEventListener('submit', onContactFormSubmit);
+refs.burgerMenuBtn.addEventListener('click', onBurgerMenuClick);
+refs.contactForm.addEventListener('input', onContactFormInput);
+refs.contactForm.addEventListener('submit', onContactFormSubmit);

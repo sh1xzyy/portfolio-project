@@ -5,6 +5,12 @@
     <link rel="shortcut icon" href="./public/favicon.svg" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DEV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
     <script type="module" src="./main.js"></script>
   </head>
@@ -20,17 +26,17 @@
           <nav class="header-nav">
             <ul class="header-nav-list">
               <li class="header-list-item">
-                <a class="header-nav-link" href="#">About me</a>
+                <a class="header-nav-link" href="#aboutMe">About me</a>
               </li>
               <li class="header-list-item">
-                <a class="header-nav-link" href="#">Projects</a>
+                <a class="header-nav-link" href="#myProjects">Projects</a>
               </li>
               <li class="header-list-item">
-                <a class="header-nav-link" href="#">Contacts</a>
+                <a class="header-nav-link" href="#contact">Contacts</a>
               </li>
             </ul>
           </nav>
-          <button class="burger-menu" type="button">
+          <button class="burger-menu" type="button" id="burgerMenu">
             <svg width="32" height="32">
               <use href="./img/icons.svg#menu-icon"></use>
             </svg>
@@ -40,6 +46,118 @@
     </header>
     <!-- Main -->
     <main>
+      <!-- About me -->
+      <section class="about" id="aboutMe">
+        <div class="container">
+          <h2 class="about-title">
+            about <span class="highlight-color">me</span>
+          </h2>
+          <div class="about-content-wrapper">
+            <div class="about-wrap">
+              <picture>
+                <source
+                  srcset="
+                    ./img/about/about-desktop@1x.png 1x,
+                    ./img/about/about-desktop@2x.png 2x
+                  "
+                  media="(min-width: 1280px)"
+                />
+                <source
+                  srcset="
+                    ./img/about/about-tablet@1x.png 1x,
+                    ./img/about/about-tablet@2x.png 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/about/about-mobile@1x.png 1x,
+                    ./img/about/about-mobile@2x.png 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  class="about-img"
+                  src="./img/about/about-mobile@1x.png"
+                  alt="Lloyd Jefferson"
+                  loading="lazy"
+                />
+              </picture>
+
+              <div class="about-bio">
+                <h3 class="about-list-title">bio</h3>
+                <ul class="about-bio-list">
+                  <li class="about-bio-item">
+                    <p class="about-me-description">
+                      I'm Lloyd Jefferson, a talented programmer specializing in
+                      software development. My expertise spans various
+                      programming languages and technologies, and I am dedicated
+                      to continually enhancing my skills. I thrive on seeking
+                      unconventional and creative solutions to problems,
+                      leveraging a high level of analytical skills to
+                      effectively tackle even the most challenging tasks.
+                    </p>
+                  </li>
+                  <li class="about-bio-item">
+                    <p class="about-me-description">
+                      Adaptable to both independent and team-oriented work, I
+                      collaborate seamlessly with colleagues, exchanging ideas
+                      and finding optimal solutions. My professional maturity
+                      enables me to navigate challenges and stressful situations
+                      with a calm demeanor, maintaining a consistently high
+                      quality of work. Committed to self-improvement, I actively
+                      engage in studying new technologies and practices to stay
+                      current with the latest innovations in the field.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <ul class="about-wrapper">
+              <li class="about-wrapper-item">
+                <h3 class="about-list-title">education</h3>
+                <ul class="about-education-list">
+                  <li class="about-education-item">
+                    <p class="about-list-description">
+                      2018 - 2019 / Frontend Development Diploma, GoIT IT
+                      School, New York
+                    </p>
+                  </li>
+                  <li class="about-education-item">
+                    <p class="about-list-description">
+                      2019 - 2020 / Advanced Web Development Certificate, GoIT
+                      IT School, New York
+                    </p>
+                  </li>
+                  <li class="about-education-item">
+                    <p class="about-list-description">
+                      2020 - 2022 / Advanced Blender Animation Techniques, Udemy
+                    </p>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="about-wrapper-item">
+                <h3 class="about-list-title">role</h3>
+
+                <ul class="about-role-list">
+                  <li class="about-role-item">
+                    <p class="about-list-description">Frontend development</p>
+                  </li>
+                  <li class="about-role-item">
+                    <p class="about-list-description">HeadlessCMS, Wordpress</p>
+                  </li>
+                  <li class="about-role-item">
+                    <p class="about-list-description">Blender (enjoy)</p>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <!-- Tech Skills -->
       <section class="tech-skills">
         <h2 class="visually-hidden">Tech Skills</h2>
@@ -110,7 +228,7 @@
       </section>
 
       <!-- Projects -->
-      <section class="projects">
+      <section class="projects" id="myProjects">
         <div class="container">
           <h2 class="projects-title">
             my <span class="highlight-color">projects</span>
@@ -312,13 +430,14 @@
       </section>
 
       <!-- Work Together -->
-      <section class="contact">
+      <section class="contact" id="contact">
         <div class="container">
-            <h2 class="contact-title">
-              let's <span class="highlight-color">work together</span>
-            </h2>
-            <div class="contact-content">
-              <div class="contact-info"><p class="contact-description">
+          <h2 class="contact-title">
+            let's <span class="highlight-color">work together</span>
+          </h2>
+          <div class="contact-content">
+            <div class="contact-info">
+              <p class="contact-description">
                 Contact me to transform your ideas into exceptional solutions.
               </p>
               <address>
@@ -356,32 +475,37 @@
             </div>
             <div class="contact-form">
               <form class="contact-form" novalidate>
-                <div class="input-field-wrapper">
-                  <label class="visually-hidden" for="userEmail"
-                    >Your Email</label
-                  >
-                  <input
-                    class="input-field"
-                    type="email"
-                    name="userEmail"
-                    id="userEmail"
-                    placeholder="Your email*"
-                  />
-                  <svg class="input-field-svg" width="16" height="16">
-                    <use href="./img/icons.svg#success-icon"></use>
-                  </svg>
+                <div class="input-wrapper">
+                  <div class="input-field-wrapper">
+                    <label class="visually-hidden" for="userEmail"
+                      >Your Email</label
+                    >
+                    <input
+                      class="input-field"
+                      type="email"
+                      name="userEmail"
+                      id="userEmail"
+                      placeholder="Your email*"
+                    />
+                    <svg class="input-field-svg" width="16" height="16">
+                      <use href="./img/icons.svg#success-icon"></use>
+                    </svg>
+                  </div>
                   <p class="error-input-msg">Invalid email, try again!</p>
                 </div>
-                <div class="textarea-field-wrapper">
-                  <label class="visually-hidden" for="userMessage"
-                    >Your Message</label
-                  >
-                  <textarea
-                    class="input-field textarea-field"
-                    name="userMessage"
-                    id="userMessage"
-                    placeholder="Message"
-                  ></textarea>
+
+                <div class="textarea-wrapper">
+                  <div class="textarea-field-wrapper">
+                    <label class="visually-hidden" for="userMessage"
+                      >Your Message</label
+                    >
+                    <textarea
+                      class="input-field textarea-field"
+                      name="userMessage"
+                      id="userMessage"
+                      placeholder="Message"
+                    ></textarea>
+                  </div>
                   <p class="error-input-msg">
                     The message must contain more than 5 letters!
                   </p>
@@ -389,18 +513,60 @@
                 <button class="submit-btn" type="submit">send message</button>
               </form>
             </div>
-            </div>
+          </div>
         </div>
       </section>
     </main>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-info">
+          <h3 class="footer-title">
+            LLOYD<span class="highlight-color">JEFFERSON.</span>
+          </h3>
+          <ul class="footer-media-list">
+            <li class="footer-media-item">
+              <a class="footer-media-link" href="#">Instagram</a>
+            </li>
+            <li class="footer-media-item">
+              <a class="footer-media-link" href="#">Facebook</a>
+            </li>
+            <li class="footer-media-item">
+              <a class="footer-media-link" href="#">Linkedin</a>
+            </li>
+            <li class="footer-media-item">
+              <a class="footer-media-link" href="#">GitHub</a>
+            </li>
+          </ul>
+        </div>
+        <p class="footer-copyright">© Copyright 2024. Made by LloydJefferson</p>
+      </div>
+    </footer>
+
+    <!-- Modal message -->
+    <div class="modal-overlay">
+      <div class="modal">
+        <button class="modal-close-btn" type="button" id="modalCloseBtn">
+          <svg width="24" height="24">
+            <use href="./img/icons.svg#close-icon"></use>
+          </svg>
+        </button>
+        <h3 class="modal-title">Thank you for your interest in cooperation!</h3>
+        <p class="modal-description">
+          The manager will contact you shortly to discuss further details and
+          opportunities for cooperation. Please stay in touch.
+        </p>
+      </div>
+    </div>
+
     <!-- Menu Overlay -->
     <div class="menu-overlay">
       <div class="container">
         <div class="menu-header">
           <a class="header-logo" href="./index.html"
-            >LLOYD<span>JEFFERSON.</span></a
+            >LLOYD<span class="highlight-color">JEFFERSON.</span></a
           >
-          <button class="menu-close-btn" type="button">
+          <button class="menu-close-btn" type="button" id="menuCloseBtn">
             <svg width="32" height="32">
               <use href="./img/icons.svg#close-icon"></use>
             </svg>
@@ -409,13 +575,13 @@
         <nav class="menu-nav">
           <ul class="menu-nav-list">
             <li class="menu-list-item">
-              <a class="menu-nav-link" href="#">About me</a>
+              <a class="menu-nav-link" href="#aboutMe">About Me</a>
             </li>
             <li class="menu-list-item">
-              <a class="menu-nav-link" href="#">Projects</a>
+              <a class="menu-nav-link" href="#myProjects">Projects</a>
             </li>
             <li class="menu-list-item">
-              <a class="menu-nav-link" href="#">Contacts</a>
+              <a class="menu-nav-link" href="#contact">Contacts</a>
             </li>
           </ul>
         </nav>
