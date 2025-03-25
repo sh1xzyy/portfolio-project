@@ -569,11 +569,6 @@ main {
 /* #endregion Reviews */
 
 /* #region Work Together */
-.contact .container {
-  display: flex;
-  flex-direction: column;
-  row-gap: 40px;
-}
 .contact-title {
   font-family: 'Impact', sans-serif;
   font-weight: 400;
@@ -596,7 +591,8 @@ main {
 .contact-list {
   display: flex;
   flex-direction: column;
-  row-gap: 16px;
+  gap: 16px;
+  margin-bottom: 40px;
 }
 .contact-list-item {
   display: flex;
@@ -615,9 +611,6 @@ main {
 .contact-item-svg {
   fill: none;
   stroke: light-dark(#00b068, #14c57c);
-}
-.contact-form {
-  max-width: 320px;
 }
 .input-field-wrapper,
 .textarea-field-wrapper {
@@ -692,8 +685,6 @@ main {
 .submit-btn:hover {
   background-color: light-dark(#009156, #009156);
 }
-@media screen and (min-width: 768px) {
-}
 /* #endregion Work Together */
 
 /* #region Mobile menu */
@@ -765,9 +756,6 @@ main {
   .menu-overlay {
     opacity: 0;
     pointer-events: none;
-  }
-  .header .container {
-    padding: 0;
   }
   .header-logo {
     font-size: 32px;
@@ -871,6 +859,26 @@ main {
   .faq-item-description {
     max-width: 605px;
   }
+  /* Work Together */
+  .contact-title{
+    font-size: 108px;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+    margin-bottom: 60px;
+  }
+  .contact-description{
+    width: 500px;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  .contact-list{
+    flex-direction: row;
+    margin-bottom: 60px;
+  }
+  .submit-btn{
+    max-width: 173px;
+  }
+  /* Footer */
 }
 
 @media screen and (min-width: 1280px) {
@@ -931,4 +939,24 @@ main {
   .faq-list {
     margin-top: 276px;
   }
+  /* Work Together */
+  .contact-content{
+    display: flex;
+    column-gap: 136px;
+  }
+  .contact-title{
+    width: 515px;
+    margin-bottom: 80px;
+  }
+  .contact-description{
+    margin-bottom: 120px;
+  }
+  .contact-list{
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .contact-form{
+    width: 100%;
+  }
+  /* Footer */
 }

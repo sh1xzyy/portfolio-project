@@ -19,7 +19,7 @@ export const onLoadMoreBtnClick = event => {
     .querySelector('.projects-list-item')
     .getBoundingClientRect();
   window.scrollBy({
-    top: item.height * 1.2,
+    top: item.height,
     behavior: 'smooth',
   });
 
