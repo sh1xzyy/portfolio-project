@@ -1,4 +1,3 @@
-import { comment } from 'postcss';
 import { sendContactForm } from '../api/api-service';
 import { refs } from '../refs/refs';
 import iziToast from 'izitoast';

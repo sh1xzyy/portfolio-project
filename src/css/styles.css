@@ -144,6 +144,85 @@ main {
 }
 /* #endregion Header */
 
+/* #region Hero */
+.hero {
+  padding-top: 0;
+}
+.hero .container {
+  padding: 112px 20px 72px 20px;
+  background: url('../img/bg-images/hero-mobile.png') no-repeat right;
+}
+.hero-content {
+  margin-bottom: 40px;
+}
+.hero-title {
+  font-family: 'Impact', sans-serif;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  color: light-dark(#292929, #f0f0f0);
+}
+.hero-link-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 92px;
+  margin-bottom: 40px;
+}
+.hero-content-link {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  column-gap: 12px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: light-dark(#292929, #f0f0f0);
+}
+.hero-link-svg {
+  fill: #00b068;
+}
+.hero-link-wrapper::after {
+  position: absolute;
+  content: '';
+  width: 165px;
+  height: 100%;
+  border-radius: 16px;
+  right: 0;
+  background-color: light-dark(#bcdfd1, #14c57c);
+}
+.hero-img {
+  display: none;
+}
+.hero-info-description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: light-dark(#292929, #f0f0f0);
+}
+.hero-media-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 0;
+  row-gap: 24px;
+  background-color: light-dark(#e4e5e6, #2a2d32);
+}
+.hero-media-link {
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: light-dark(#292929, #f0f0f0);
+}
+/* #endregion Hero */
+
 /* #region About me */
 .about-title {
   font-family: 'Impact', sans-serif;
@@ -154,25 +233,26 @@ main {
   text-transform: uppercase;
   text-align: left;
   margin-bottom: 40px;
-  color: #292929;
+  color: light-dark(#292929, #f0f0f0);
 }
-.about-img {
+.about-content-image {
   margin-bottom: 40px;
 }
-.about-list-title {
+.about-bio-title,
+.about-info-title {
   font-weight: 500;
   font-size: 32px;
   line-height: 1.25;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   margin-bottom: 32px;
-  color: #292929;
+  color: light-dark(#292929, #f0f0f0);
 }
-.about-me-description,
-.about-list-description {
+.about-bio-description,
+.about-info-description {
   line-height: 1.5;
   letter-spacing: 0.03em;
-  color: #292929;
+  color: light-dark(#292929, #f0f0f0);
 }
 .about-bio {
   margin-bottom: 40px;
@@ -205,7 +285,7 @@ main {
   width: 4px;
   height: 4px;
   border-radius: 2px;
-  background-color: #00b068;
+  background-color: light-dark(#00b068, #14c57c);
 }
 .about-role-item {
   position: relative;
@@ -243,7 +323,7 @@ main {
   padding: 32px 15px;
   min-width: 100%;
   white-space: nowrap;
-  animation: marqueeLine 15s linear infinite;
+  animation: marqueeLine 20s linear infinite;
 }
 
 .marquee__line span {
@@ -466,7 +546,7 @@ main {
 .is-active::after {
   display: none;
 }
-.is-active .faq-btn {
+.is-active .faq-toggle-btn {
   transform: rotate(180deg);
 }
 .is-active .faq-item-title {
@@ -489,7 +569,7 @@ main {
 .faq-list-item:nth-child(5) .faq-item-title {
   max-width: 239px;
 }
-.faq-btn {
+.faq-toggle-btn {
   position: absolute;
   top: 32px;
   right: 28px;
@@ -960,8 +1040,44 @@ main {
     letter-spacing: 0.03em;
     color: light-dark(#292929, #f0f0f0);
   }
+  /* Hero */
+  .hero-content-wrapper {
+    padding: 72px 0 88px 0;
+    margin: 16px 0;
+  }
+  .hero .container {
+    padding: 88px 20px;
+    background: url('../img/bg-images/hero-tablet-decor.png') no-repeat top
+      right;
+  }
+  .hero-title {
+    font-size: 124px;
+    line-height: 1.19;
+    letter-spacing: 0.01em;
+    margin-bottom: 60px;
+  }
+  .hero-link-wrapper {
+    height: 96px;
+    max-width: 416px;
+  }
+  .hero-link-wrapper::after {
+    width: 261px;
+  }
+  .hero-content-link {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  .hero-info-description {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  .hero-media-list {
+    flex-direction: row;
+    padding: 40px 0;
+    column-gap: 40px;
+  }
   /* About me */
-  .about-content-wrapper {
+  .about-content {
     background: url('../img/bg-images/about-decor-tablet.png') no-repeat bottom
       156px right;
   }
@@ -970,27 +1086,27 @@ main {
     line-height: 1.15;
     letter-spacing: 0.02em;
   }
-  .about-wrap {
+  .about-content-wrapper {
     display: flex;
     column-gap: 32px;
   }
-  .about-list-title {
+  .about-info-title {
     font-size: 36px;
   }
   .about-bio {
     max-width: 336px;
   }
-  .about-img {
+  .about-content-image {
     margin: 408px 0 60px 0;
   }
-  .about-wrapper {
+  .about-info {
     display: flex;
     column-gap: 32px;
   }
   .about-education-list {
     margin-bottom: 0;
   }
-  .about-wrapper-item {
+  .about-info-item {
     width: 336px;
   }
   .about-role-list,
@@ -1098,7 +1214,6 @@ main {
   }
   /* Footer */
 }
-
 @media screen and (min-width: 1280px) {
   .container {
     max-width: 1280px;
@@ -1113,20 +1228,45 @@ main {
     display: block;
     margin-right: 40px;
   }
+  /* Hero */
+  .hero .container {
+    display: flex;
+    column-gap: 72px;
+    background: url('../img/bg-images/hero-desktop-decor.png') no-repeat;
+  }
+  .hero-title {
+    width: 550px;
+    margin-bottom: 80px;
+  }
+  .hero-img {
+    display: block;
+  }
+  .hero-link-wrapper {
+    margin-bottom: 0;
+  }
+  .hero-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 80px;
+  }
   /* About me */
-  .about-content-wrapper {
+  .about-content {
     margin-left: 208px;
     background: url('../img/bg-images/about-decor-desktop.png') no-repeat bottom
       300px right;
   }
-  .about-wrap,
-  .about-wrapper {
+  .about-content-image {
+    margin: 312px 0 80px 0;
+  }
+  .about-content-wrapper,
+  .about-info {
     column-gap: 136px;
   }
-  .about-wrapper-item {
+  .about-info-item {
     width: 384px;
   }
-  .about-list-description {
+  .about-info-description {
     max-width: 355px;
   }
   .about-bio {
@@ -1139,12 +1279,15 @@ main {
   .projects-title {
     margin-bottom: 80px;
   }
+  .projects-list {
+    row-gap: 80px;
+  }
   .projects-img {
-    width: 1008px;
     height: 580px;
   }
+
   /* Benefits */
-  .benefits-container {
+  .benefits {
     max-width: 1216px;
     margin: 0 auto;
     background-repeat: no-repeat;
@@ -1172,6 +1315,9 @@ main {
   .faq-title {
     max-width: 520px;
     margin-bottom: 0;
+  }
+  .faq-list-item:nth-child(5) .faq-item-title {
+    max-width: 100%;
   }
   .faq-list {
     margin-top: 276px;
