@@ -11,4 +11,5 @@ export const refs = {
   modalOverlay: document.querySelector('.modal-overlay'),
   burgerMenuBtn: document.querySelector('#burgerMenu'),
   menuOverlay: document.querySelector('.menu-overlay'),
+  themeSwitchBtn: document.querySelector('#themeSwitchBtn'),
 };

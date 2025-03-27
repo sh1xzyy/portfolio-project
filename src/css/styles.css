@@ -65,7 +65,8 @@ body {
   font-weight: 300;
   font-size: 16px;
   overflow-x: hidden;
-  background-color: light-dark(#f0f0f0, #303030);
+  background-color: light-dark(#f0f0f0, #1e2023);
+  transition: all 250ms linear;
 }
 
 main {
@@ -129,7 +130,7 @@ main {
   text-transform: uppercase;
   color: light-dark(#292929, #f0f0f0);
 }
-.theme-switch {
+.theme-switch-wrapper {
   display: none;
 }
 .header-nav {
@@ -140,6 +141,7 @@ main {
   border: none;
   margin: 0;
   line-height: 0;
+  fill: light-dark(#292929, #f0f0f0);
   background-color: transparent;
 }
 /* #endregion Header */
@@ -193,7 +195,7 @@ main {
   width: 165px;
   height: 100%;
   border-radius: 16px;
-  right: 0;
+  right: 2px;
   background-color: light-dark(#bcdfd1, #14c57c);
 }
 .hero-img {
@@ -220,7 +222,12 @@ main {
   line-height: 1.5;
   letter-spacing: 0.03em;
   color: light-dark(#292929, #f0f0f0);
+  transition: color 250ms linear;
 }
+.hero-media-link:hover {
+  color: light-dark(#00b068, #14c57c);
+}
+
 /* #endregion Hero */
 
 /* #region About me */
@@ -384,6 +391,8 @@ main {
   row-gap: 40px;
 }
 .projects-img {
+  width: 100%;
+  height: 194px;
   border-radius: 16px;
   margin-bottom: 12px;
 }
@@ -503,7 +512,6 @@ main {
   color: light-dark(#292929, #f0f0f0);
 }
 .benefits-description {
-  max-width: 285px;
   line-height: 1.5;
   letter-spacing: 0.03em;
   color: light-dark(#292929, #f0f0f0);
@@ -927,6 +935,10 @@ main {
   line-height: 1.5;
   letter-spacing: 0.03em;
   color: light-dark(#292929, #f0f0f0);
+  transition: color 250ms linear;
+}
+.footer-media-link:hover {
+  color: light-dark(#00b068, #14c57c);
 }
 .footer-copyright {
   max-width: 184px;
@@ -960,7 +972,7 @@ main {
   z-index: 999;
   opacity: 0;
   pointer-events: none;
-  background-color: #f0f0f0;
+  background-color: light-dark(#f0f0f0, #1e2023);
   transition: opacity 250ms linear;
 }
 
@@ -975,7 +987,7 @@ main {
   padding: 16px 0;
 }
 .menu-close-btn {
-  stroke: #292929;
+  stroke: light-dark(#292929, #f0f0f0);
   border: none;
   line-height: 0;
   background-color: transparent;
@@ -995,7 +1007,7 @@ main {
 .menu-nav-link {
   line-height: 1.5;
   letter-spacing: 0.03em;
-  color: #292929;
+  color: light-dark(#292929, #f0f0f0);
 }
 /* #endregion Mobile menu */
 
@@ -1039,6 +1051,10 @@ main {
     line-height: 1.5;
     letter-spacing: 0.03em;
     color: light-dark(#292929, #f0f0f0);
+    transition: color 250ms linear;
+  }
+  .header-nav-link:hover {
+    color: light-dark(#00b068, #14c57c);
   }
   /* Hero */
   .hero-content-wrapper {
@@ -1133,6 +1149,7 @@ main {
     row-gap: 60px;
   }
   .projects-img {
+    height: 428px;
     border-radius: 24px;
     margin-bottom: 16px;
   }
@@ -1176,9 +1193,6 @@ main {
     font-size: 20px;
     line-height: 1.6;
   }
-  .benefits-description {
-    max-width: 304px;
-  }
   /* FAQ */
   .faq-title {
     font-size: 108px;
@@ -1221,12 +1235,38 @@ main {
   section {
     padding: 82px 0;
   }
+  /* Header */
   .right-block {
     display: flex;
+    align-items: center;
+    column-gap: 40px;
   }
-  .theme-switch {
+  .theme-switch-wrapper {
     display: block;
-    margin-right: 40px;
+    position: relative;
+  }
+  .theme-switch-custom {
+    display: block;
+    cursor: pointer;
+    width: 48px;
+    height: 24px;
+    border-radius: 16px;
+    background-color: light-dark(#e4e5e6, #292929);
+  }
+  .theme-switch-custom::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 2px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    background-color: light-dark(#00b068, #14c57c);
+    transition: left 250ms ease-in-out;
+  }
+  .checkbox:checked + .theme-switch-custom::after {
+    left: 26px;
   }
   /* Hero */
   .hero .container {
@@ -1242,7 +1282,7 @@ main {
     display: block;
   }
   .hero-link-wrapper {
-    margin-bottom: 0;
+    margin: 0 auto;
   }
   .hero-info {
     display: flex;
@@ -1274,7 +1314,7 @@ main {
   }
   /* My Projects */
   .projects .container {
-    max-width: 1008px;
+    max-width: 1072px;
   }
   .projects-title {
     margin-bottom: 80px;
@@ -1285,7 +1325,6 @@ main {
   .projects-img {
     height: 580px;
   }
-
   /* Benefits */
   .benefits {
     max-width: 1216px;
@@ -1296,15 +1335,13 @@ main {
   }
   .benefits-title {
     width: 690px;
+    margin-bottom: -90px;
   }
   .benefits-list-item {
     width: calc((100% - 2 * 32px) / 3);
   }
   .benefits-list-item:first-child {
     margin-left: 790px;
-  }
-  .benefits-description {
-    max-width: 340px;
   }
   /* FAQ */
   .faq .container {

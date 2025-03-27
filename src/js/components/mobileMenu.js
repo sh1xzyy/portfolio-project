@@ -1,6 +1,6 @@
 import { refs } from '../refs/refs';
 
-export const onBurgerMenuClick = ({ target }) => {
+export const onBurgerMenuClick = () => {
   refs.menuOverlay.classList.add('is-open');
   refs.body.classList.add('no-scroll');
 

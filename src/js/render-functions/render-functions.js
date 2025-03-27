@@ -20,7 +20,7 @@ const createReviewMarkup = ({ author, avatar_url, review }) => {
 const createProjectMarkup = ({ title, url1, url2, technologies }) => {
   return `
     <li class="projects-list-item">
-      <img class="projects-img" src="${url1}" alt="${title}" srcset="${url1} 1x, ${url2} 2x" loading="lazy">
+      <img class="projects-img" src="${url1}" srcset="${url1} 1x, ${url2} 2x" alt="${title}" loading="lazy">
       <p class="projects-technologies">${technologies}</p>
       <div class="projects-container">
         <h3 class="projects-name">${title}</h3>
