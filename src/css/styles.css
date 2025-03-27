@@ -7,6 +7,12 @@
   color-scheme: light dark;
 }
 
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -64,13 +70,8 @@ body {
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
   font-size: 16px;
-  overflow-x: hidden;
   background-color: light-dark(#f0f0f0, #1e2023);
   transition: all 250ms linear;
-}
-
-main {
-  flex-grow: 1;
 }
 
 .theme-light {
@@ -544,7 +545,7 @@ main {
   content: '';
   bottom: 0;
   left: 0;
-  width: 97%;
+  width: 100%;
   height: 2px;
   background-color: light-dark(#e4e5e6, #f0f0f0);
 }
@@ -1086,6 +1087,7 @@ main {
   .hero-info-description {
     font-size: 20px;
     line-height: 1.6;
+    max-width: 690px;
   }
   .hero-media-list {
     flex-direction: row;
@@ -1290,6 +1292,9 @@ main {
     align-items: center;
     row-gap: 80px;
   }
+  .hero-info-description {
+    max-width: 550px;
+  }
   /* About me */
   .about-content {
     margin-left: 208px;
@@ -1358,6 +1363,9 @@ main {
   }
   .faq-list {
     margin-top: 276px;
+  }
+  .faq-item-title {
+    max-width: 525px;
   }
   /* Reviews */
   .reviews {
