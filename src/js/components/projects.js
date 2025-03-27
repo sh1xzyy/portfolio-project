@@ -28,5 +28,3 @@ export const onLoadMoreBtnClick = event => {
     refs.loadMoreBtn.removeEventListener('click', onLoadMoreBtnClick);
   }
 };
-
-refs.loadMoreBtn.addEventListener('click', onLoadMoreBtnClick);

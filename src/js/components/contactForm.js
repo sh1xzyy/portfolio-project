@@ -2,6 +2,9 @@ import { sendContactForm } from '../api/api-service';
 import { refs } from '../refs/refs';
 import iziToast from 'izitoast';
 
+const inputWrapper = document.querySelector('.input-wrapper');
+const textareaWrapper = document.querySelector('.textarea-wrapper');
+
 export const onContactFormSubmit = async event => {
   event.preventDefault();
 
@@ -13,8 +16,8 @@ export const onContactFormSubmit = async event => {
     emailValue.endsWith('@gmail.com') && emailValue.length > 10;
   const isMessageValid = messageValue.length > 5;
 
-  if (!isEmailValid) refs.inputWrapper.classList.add('is-error');
-  if (!isMessageValid) refs.textareaWrapper.classList.add('is-error');
+  if (!isEmailValid) inputWrapper.classList.add('is-error');
+  if (!isMessageValid) textareaWrapper.classList.add('is-error');
 
   if (!isEmailValid || !isMessageValid) return;
 
@@ -22,7 +25,7 @@ export const onContactFormSubmit = async event => {
     await sendContactForm({ email: emailValue, comment: messageValue });
     refs.modalOverlay.classList.add('is-open');
     refs.body.classList.add('no-scroll');
-    refs.inputWrapper.classList.remove('is-correct');
+    inputWrapper.classList.remove('is-correct');
     refs.modalOverlay.addEventListener('click', modalOverlayClose);
     document.addEventListener('keydown', onHandleEscapeKey);
     form.reset();
@@ -43,12 +46,12 @@ export const onContactFormInput = event => {
   if (input.id === 'userEmail') {
     const isEmailValid =
       input.value.endsWith('@gmail.com') && input.value.length > 10;
-    refs.inputWrapper.classList.toggle('is-correct', isEmailValid);
-    refs.inputWrapper.classList.toggle('is-error', !isEmailValid);
+    inputWrapper.classList.toggle('is-correct', isEmailValid);
+    inputWrapper.classList.toggle('is-error', !isEmailValid);
   }
   if (input.id === 'userMessage') {
     const isMessageValid = input.value.length > 5;
-    refs.textareaWrapper.classList.toggle('is-error', !isMessageValid);
+    textareaWrapper.classList.toggle('is-error', !isMessageValid);
   }
 };
 

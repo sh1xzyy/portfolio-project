@@ -1,10 +1,9 @@
 import { renderMarkup } from '../render-functions/render-functions';
 import { Keyboard, Navigation } from 'swiper/modules';
 import { getReviews } from '../api/api-service';
-import { refs } from "../refs/refs"
+import { refs } from '../refs/refs';
 import iziToast from 'izitoast';
 import Swiper from 'swiper';
-
 
 const initSwiper = () => {
   const swiper = new Swiper('.swiper', {
@@ -35,8 +34,8 @@ export const swiperLogic = async () => {
     const data = await getReviews();
 
     if (!data.length) {
-      refs.buttons.classList.add('is-hidden');
-      refs.errorMsg.classList.remove('is-hidden');
+      refs.reviewsButtons.classList.add('is-hidden');
+      refs.reviewsErrorMsg.classList.remove('is-hidden');
       return;
     }
 
@@ -50,7 +49,7 @@ export const swiperLogic = async () => {
       messageColor: '#FAFAFB',
       backgroundColor: '#EF4040',
     });
-    refs.buttons.classList.add('is-hidden');
-    refs.errorMsg.classList.remove('is-hidden');
+    refs.reviewsButtons.classList.add('is-hidden');
+    refs.reviewsErrorMsg.classList.remove('is-hidden');
   }
 };

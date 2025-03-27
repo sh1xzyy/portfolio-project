@@ -39,7 +39,7 @@ const createProjectMarkup = ({ title, url1, url2, technologies }) => {
 
 export const renderMarkup = data => {
   const markup = data.map(createReviewMarkup).join('');
-  refs.list.insertAdjacentHTML('beforeend', markup);
+  refs.reviewsList.insertAdjacentHTML('beforeend', markup);
 };
 
 export const renderProjectsMarkup = data => {
