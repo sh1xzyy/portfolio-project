@@ -8,6 +8,7 @@ import{a as g,i as p,S,N as L,K as b}from"./assets/vendor-BcmNZR9L.js";(function
         alt="${e}"
         width="40"
         height="40"
+        loading="lazy"
       />
       <h3 class="swiper-user-name">${e}</h3>
     </div>
