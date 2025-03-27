@@ -11,6 +11,7 @@ const createReviewMarkup = ({ author, avatar_url, review }) => {
         alt="${author}"
         width="40"
         height="40"
+        loading="lazy"
       />
       <h3 class="swiper-user-name">${author}</h3>
     </div>
