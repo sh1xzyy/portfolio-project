@@ -21,7 +21,7 @@ import{a as m,i as g,S as b,N as x,K as k}from"./assets/vendor-BcmNZR9L.js";(fun
         <div class="projects-link-wrapper">
           <a href="#" class="projects-visit-link">visit
             <svg class="projects-visit-svg">
-              <use href="./img/icons.svg#visit-arrow"></use>
+              <use href="/img/icons.svg#visit-arrow"></use>
             </svg>
           </a>
         </div>
